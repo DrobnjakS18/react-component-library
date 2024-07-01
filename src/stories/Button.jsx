@@ -2,12 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 import { Button as MantineButton } from '@mantine/core';
-import '@mantine/core/styles.css';
-import { createTheme, MantineProvider } from '@mantine/core';
-
-const theme = createTheme({
-  /** Put your mantine theme override here */
-});
 
 
 /**
@@ -25,17 +19,13 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
     //   {label}
     // </button>
 
-    <MantineProvider theme={theme}>
-      <MantineButton
+    <MantineButton
         className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
         style={backgroundColor && { backgroundColor }}
         {...props}
-      >
-        {label}
-      </MantineButton>
-    </MantineProvider>
-
-
+    >
+      {label}
+    </MantineButton>
   );
 };
 
