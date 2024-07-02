@@ -1,4 +1,4 @@
-interface PathEntry {}
+// interface PathEntry {}
 
 const _helper = (path: any[], entries: [string, Array<any>][], acc: any[]) => {
   if (entries.length === 0) {
